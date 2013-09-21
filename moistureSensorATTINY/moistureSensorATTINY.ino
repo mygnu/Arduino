@@ -18,6 +18,10 @@
 */
 // AMTEL ATTINY45 / ARDUINO PIN-MAP
 //
+//Digital Output
+// PB0-PB4
+//Analog input
+// Ain0-Ain3 
 //                  +-\/-+
 // Ain0 (D 5) PB5  1|    |8  Vcc +5V
 // Ain3 (D 3) PB3  2|    |7  PB2 (D 2)  Ain1
@@ -25,14 +29,23 @@
 //            GND  4|    |5  PB0 (D 0) pwm0
 //                  +----+
 
+// AMTEL ATTINY45 / ARDUINO PIN-MAP
+//                  +-\/-+
+//                 -|    |-  Vcc +5V
+// PotMeterIn PB3  -|    |-  PB1   Moisture sensor Input
+// Relay Out  PB4  -|    |-  PB1 Green LED
+//            GND  -|    |-  PB0 Red LED
+//                  +----+
+
 // Code:
 
 //define macros
-#define redLed 2
-#define greenLed 3
-#define sensorPin A0
-#define relayPin  4
-#define potMPin A2
+#define redLed PB0
+#define greenLed PB1
+#define sensorPin PB1
+#define relayPin  PB4
+#define potMPin PB3
+
 #define sensorRead (sensorVal(sensorPin))
 #define pumpOn (digitalWrite(relayPin, HIGH))
 #define pumpOff (digitalWrite(relayPin, LOW))
@@ -71,20 +84,25 @@ void loop()
 	if (sensorRead < 250) // not connected or faulty value
 		{
 			pumpOff;
-			waitBlink(redLed, 10, 0); //blink 10
+			digitalWrite(redLed, HIGH);
+                        delay(500);
+                        digitalWrite(redLed, LOW);
+                        digitalWrite(greenLed, HIGH);
+                        delay(500);
+                        digitalWrite(greenLed, LOW);
 		}
 	
 
 	else if((sensorRead >= 250) && (sensorRead < 600))
 	 
 		{
-			waitBlink(redLed, 10, 0); //blink 10 times
+			waitBlink(redLed, ((pMinutes) * 2), 0); //blink minutes times
 			pumpOn;
 			waitBlink(redLed, 0, ((pMinutes) * 2)); // its dry run it for double the time
 		}
 	else if((sensorRead >= 600) && (sensorRead <= 800))
 		{
-			waitBlink(redLed, 3, 0);
+			waitBlink(redLed, pMinutes, 0);
 			pumpOn;
 			waitBlink(redLed, 0, pMinutes);
 		}
@@ -92,7 +110,6 @@ void loop()
 	else if((sensorRead > 800) && (sensorRead < 850))
 		{
 			pumpOff;
-			waitBlink(greenLed, 10 , 0);
 			waitBlink(greenLed, 0, 20); // wait for 20 minutes
 		}
 	else
