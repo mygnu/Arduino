@@ -1,0 +1,31 @@
+moistureSensorATTINY.o: moistureSensorATTINY.ino \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/Arduino.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/binary.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/WCharacter.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/WString.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/HardwareSerial.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/Stream.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/Print.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/Printable.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/new.h \
+ /home/harry/git/arduino-1.0.5/hardware/arduino/variants/standard/pins_arduino.h
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/Arduino.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/binary.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/WCharacter.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/WString.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/HardwareSerial.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/Stream.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/Print.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/Printable.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/cores/arduino/new.h:
+
+/home/harry/git/arduino-1.0.5/hardware/arduino/variants/standard/pins_arduino.h:
