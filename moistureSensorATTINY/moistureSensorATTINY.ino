@@ -136,7 +136,7 @@ void waitBlink(byte pin, int numBlinks, int mins)
 			
 			}
 		} else{
-		for(i = 0; i < numBlinks; i++ )
+		for(i = 0; i < numBlinks; ++i )
 			{
 				digitalWrite(pin, HIGH); // turns on the pin on to 5v 
 				delay(250);             // keeps the led on for one quater second 
@@ -178,9 +178,8 @@ int poten2minutes(byte pin)
 	sensorVal2 = analogRead(pin);
 	delay(100);
 	sensorVal3 = analogRead(pin);
-	sensorVal1 = (sensorVal1 + sensorVal2 + sensorVal3) /3;
-	Mins = sensorVal1 / 34;
-
+	Mins = (sensorVal1 + sensorVal2 + sensorVal3) /102;
+	
 	if (Mins < 1)
 		{
 			Mins = 1;
