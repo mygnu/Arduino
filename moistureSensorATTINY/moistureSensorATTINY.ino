@@ -167,8 +167,7 @@ int sensorVal(byte pin) // takes the pin number as an argument
 int poten2minutes(byte pin)
 {
 	
-	//unsigned int sensorVal = 0;// variable to store the value coming from the potentiometer
-	unsigned int sensorVal1 = 0;
+	unsigned int sensorVal1 = 0; // variables to store the value coming from the potentiometer
 	unsigned int sensorVal2 = 0;
 	unsigned int sensorVal3 = 0;
 	int Mins = 0;
