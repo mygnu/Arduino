@@ -40,11 +40,11 @@
 // Code:
 
 //define macros
-#define redLed PB0
-#define greenLed PB1
-#define sensorPin PB1
-#define relayPin  PB4
-#define potMPin PB3
+#define redLed PB0     //pin 5
+#define greenLed PB1   //pin 6 for digital output
+#define sensorPin PB1  //pin 7 analog input has the different pin numbers  
+#define relayPin  PB4  //pin 3
+#define potMPin PB3    //pin 2
 
 #define sensorRead (sensorVal(sensorPin))
 #define pumpOn (digitalWrite(relayPin, HIGH))
