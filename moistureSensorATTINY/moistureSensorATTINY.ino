@@ -5,10 +5,11 @@
 **     Description: detects moisture from the soil and turns the pump on and off accordingly
 **     Author: harry <harry@Ubuntu-STA>
 **     Maintainer: harry <harry@Ubuntu-STA>
-**     Copyright (C) 2013, harry, all rights reserved.
+**     this program is under GPL ->> https://www.gnu.org/copyleft/gpl.html
+**     CopyLeft (ↄ) 2013, Harry, You are free to copy, use, modify and redistribute this file.
 **     Created: 02-09-2013 11:40:37
 **     Version: 0.1
-**     Last-Updated: 02-09-2013
+**     Last-Updated: 21-09-2013
 **               By: harry
 **    // TODO
 **           
