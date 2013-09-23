@@ -124,7 +124,7 @@ void loop()
 
 void waitBlink(byte pin, int numBlinks, int mins) 
 {
-	byte i;
+	int i;
 	if(mins > 0)
 		{
 		for (i = 0; i < mins; ++i)
