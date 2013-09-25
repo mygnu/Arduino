@@ -125,26 +125,37 @@ void loop()
 void waitBlink(byte pin, int numBlinks, int mins) 
 {
 	int i;
-	if(mins > 0)
+
+	for (i = 0; i < (mins > 0)?mins:numBlinks; ++i)
 		{
-		for (i = 0; i < mins; ++i)
-			{
-			digitalWrite(pin, HIGH);
-			delay(500); // led on for half a second
-			digitalWrite(pin, LOW);
-			delay(59500); //delay for one minute
-			
-			}
-		} else{
-		for(i = 0; i < numBlinks; ++i )
-			{
-				digitalWrite(pin, HIGH); // turns on the pin on to 5v 
-				delay(250);             // keeps the led on for one quater second 
-				digitalWrite(pin, LOW);  // turn off the led
-				delay(250);
-				
-			}
+			digitalWrite(pin, HIGH);   // turn on led
+			delay((mins>0)?500:250);   // led on for half a second or quarter second
+			digitalWrite(pin, LOW);    // led off
+			delay((mins>0)?59500:500); // delay for one minute or quarter second
 		}
+
+
+
+	/* if(mins > 0) */
+	/* 	{ */
+	/* 	for (i = 0; i < mins; ++i) */
+	/* 		{ */
+	/* 		digitalWrite(pin, HIGH); */
+	/* 		delay(500); // led on for half a second */
+	/* 		digitalWrite(pin, LOW); */
+	/* 		delay(59500); //delay for one minute */
+			
+	/* 		} */
+	/* 	} else{ */
+	/* 	for(i = 0; i < numBlinks; ++i ) */
+	/* 		{ */
+	/* 			digitalWrite(pin, HIGH); // turns on the pin on to 5v  */
+	/* 			delay(250);             // keeps the led on for one quater second  */
+	/* 			digitalWrite(pin, LOW);  // turn off the led */
+	/* 			delay(250); */
+				
+	/* 		} */
+	/* 	} */
 	
 }
 
