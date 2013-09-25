@@ -167,17 +167,7 @@ int sensorVal(byte pin) // takes the pin number as an argument
 int poten2minutes(byte pin)
 {
 	
-	unsigned int sensorVal1 = 0; // variables to store the value coming from the potentiometer
-	unsigned int sensorVal2 = 0;
-	unsigned int sensorVal3 = 0;
-	int Mins = 0;
-	
-	sensorVal1 = analogRead(pin);
-	delay(100);
-	sensorVal2 = analogRead(pin);
-	delay(100);
-	sensorVal3 = analogRead(pin);
-	Mins = (sensorVal1 + sensorVal2 + sensorVal3) /102;
+	int Mins = sensorVal(pin) / 34;
 	
 	if (Mins < 1)
 		{
