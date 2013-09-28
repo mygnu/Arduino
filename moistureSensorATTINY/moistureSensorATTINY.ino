@@ -30,10 +30,10 @@
 //            GND  4|    |5  PB0 (D 0) pwm0
 //                  +----+
 
-// AMTEL ATTINY45 / ARDUINO PIN-MAP
+// AMTEL ATTINY85 /USED PIN-MAP
 //                  +-\/-+
 //                 -|    |-  Vcc +5V
-// PotMeterIn PB3  -|    |-  PB1   Moisture sensor Input
+// PotMeterIn PB3  -|    |-  PB1 Moisture sensor Input
 // Relay Out  PB4  -|    |-  PB1 Green LED
 //            GND  -|    |-  PB0 Red LED
 //                  +----+
